@@ -1,7 +1,9 @@
-
+import Header from '../components/Header'
 const Home = () => {
   return (
-    <div className="text-red-700">Home</div>
+    <div>
+      <Header />
+    </div>
   )
 }
 
