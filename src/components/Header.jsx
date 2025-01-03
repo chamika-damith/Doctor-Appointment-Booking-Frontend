@@ -2,11 +2,11 @@ import { assets } from "../assets/assets";
 
 const Header = () => {
   return (
-    <section className="flex flex-col md:flex-row flex-wrap bg-blue-500 rounded-lg px-6 md:px-10 lg:px-20">
+    <section className="flex flex-col md:flex-row flex-wrap bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg px-6 md:px-10 lg:px-20">
       {/*-------- Left Side --------*/}
       <div className="md:w-1/2 flex flex-col items-start justify-center gap-4 py-10 m-auto md:py-[10vw] md:mb-[-30px]">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-semibold leading-tight">
-          Book Appointment <br /> With Trusted Doctors
+        <h1 className="text-3xl md:text-4xl lg:text-6xl text-white font-semibold leading-tight">
+          Book Appointments <br /> With Trusted Doctors
         </h1>
         <div className="mt-1 flex items-center gap-4">
           <img
@@ -15,8 +15,7 @@ const Header = () => {
             className="w-24 h-11 rounded-full"
           />
           <p className="text-white">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            temporibus quisquam rem cum voluptas 
+          Join thousands of satisfied patients who trust our network of expert healthcare professionals.
           </p>
         </div>
         <a
