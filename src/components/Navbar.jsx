@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <div className="flex  items-center justify-between text-sm py-4 mb-5 border-b border-gray-400 relative">
-            <img src={assets.logo} alt="logo" className="w-36 cursor-pointer" />
+            <img onClick={()=>{navigate('/')}} src={assets.logo} alt="logo" className="w-36 cursor-pointer" />
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex  items-center gap-10 font-medium">
