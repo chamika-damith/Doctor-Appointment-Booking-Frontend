@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { assets } from "../assets/assets";
+import RelatedDoctors from "../components/RelatedDoctors";
 
 const Appointments = () => {
   const { docId } = useParams();
@@ -132,6 +133,8 @@ const Appointments = () => {
           </div>
           <button className="bg-blue-500 text-white text-sm font-medium py-3 px-14 rounded-full my-6 hover:bg-blue-600 duration-200">Book and appoinment</button>
         </div>
+
+        <RelatedDoctors key={docId}/>
       </div>
     )
   );
