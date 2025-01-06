@@ -3,10 +3,12 @@ import {  useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { assets } from "../assets/assets";
 import RelatedDoctors from "../components/RelatedDoctors";
+import {useDispatch} from "react-redux";
 
 const Appointments = () => {
   const { docId } = useParams();
   const doctors = useSelector((state) => state.doctors);
+  const dispatch = useDispatch();
 
   const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
   const [docInfo, setDocInfo] = useState(null);
@@ -65,6 +67,16 @@ const Appointments = () => {
   useEffect(() => {
     if (docInfo) getAvailableSlots();
   }, [docInfo]);
+
+  useEffect(() => {
+    if (docInfo) {
+      dispatch({
+        type: "FETCH_RELATED_DOCTORS",
+        payload: { docId: docInfo._id, speciality: docInfo.speciality },
+      });
+    }
+  }, [docInfo, dispatch]);
+  
 
   return (
     docInfo && (
@@ -134,7 +146,7 @@ const Appointments = () => {
           <button className="bg-blue-500 text-white text-sm font-medium py-3 px-14 rounded-full my-6 hover:bg-blue-600 duration-200">Book and appoinment</button>
         </div>
 
-        <RelatedDoctors key={docId}/>
+        <RelatedDoctors />
       </div>
     )
   );
