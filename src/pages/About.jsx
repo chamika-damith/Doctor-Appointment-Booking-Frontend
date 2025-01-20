@@ -37,7 +37,7 @@ const About = () => {
       </div>
 
       {/* Our Vision Section */}
-      <div className="mt-20">
+      <div className="mt-28 ">
         <div className="text-center text-xl font-semibold text-gray-800">
           Our <span className="text-blue-600">Vision</span>
         </div>
@@ -50,7 +50,7 @@ const About = () => {
       </div>
 
       {/* Our Story Section */}
-      <div className="mt-20 flex flex-col md:flex-row gap-16 items-center">
+      <div className="mt-28 flex flex-col md:flex-row gap-16 items-center">
         <div className="md:w-3/5 text-base text-gray-700 leading-relaxed">
           <h2 className="text-lg font-semibold text-gray-800">
             Our <span className="text-blue-600">Story</span>
@@ -74,6 +74,38 @@ const About = () => {
           src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Our Story"
         />
+      </div>
+
+      <div className="my-12 mt-32">
+        <div className="text-center text-xl font-semibold text-gray-800">
+          Why <span className="text-blue-600">Choose us</span>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-6 mb-20">
+        <div className="border px-6 md:px-12 py-8 flex-1 text-center rounded-lg shadow-lg hover:bg-blue-500 hover:text-white transition-all duration-500">
+          <b className="block text-lg mb-2">Efficiency:</b>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+            ipsam!
+          </p>
+        </div>
+
+        <div className="border px-6 md:px-12 py-8 flex-1 text-center rounded-lg shadow-lg hover:bg-blue-500 hover:text-white transition-all duration-500">
+          <b className="block text-lg mb-2">Convenience:</b>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+            ipsam!
+          </p>
+        </div>
+
+        <div className="border px-6 md:px-12 py-8 flex-1 text-center rounded-lg shadow-lg hover:bg-blue-500 hover:text-white transition-all duration-500">
+          <b className="block text-lg mb-2">Personalization:</b>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+            ipsam!
+          </p>
+        </div>
       </div>
     </div>
   );
