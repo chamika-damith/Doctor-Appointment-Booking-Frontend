@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { assets } from "../assets/assets";
 import RelatedDoctors from "../components/RelatedDoctors";
 import {useDispatch} from "react-redux";
+import { addRelatedDoctors } from "../redux/relatedDoctorSlice";
 
 const Appointments = () => {
   const { docId } = useParams();
@@ -70,12 +71,12 @@ const Appointments = () => {
 
   useEffect(() => {
     if (docInfo) {
-      dispatch({
-        type: "FETCH_RELATED_DOCTORS",
-        payload: { docId: docInfo._id, speciality: docInfo.speciality },
-      });
+      dispatch(
+        addRelatedDoctors({ docId: docInfo._id, speciality: docInfo.speciality })
+      );
     }
   }, [docInfo, dispatch]);
+
   
 
   return (
