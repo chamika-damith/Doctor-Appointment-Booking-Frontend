@@ -18,7 +18,7 @@ const Navbar = () => {
       </h3>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex  items-center gap-10 font-medium">
+      <ul className="hidden md:flex  items-center gap-10 font-medium text-base">
         <li>
           <NavLink
             to="/"
@@ -28,7 +28,7 @@ const Navbar = () => {
                 : "text-gray-700 hover:text-green-400 duration-150"
             }
           >
-            HOME
+            Home
           </NavLink>
         </li>
         <li>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 : "text-gray-700 hover:text-green-400 duration-150"
             }
           >
-            ALL DOCTORS
+            All Doctors
           </NavLink>
         </li>
         <li>
@@ -52,7 +52,7 @@ const Navbar = () => {
                 : "text-gray-700  hover:text-green-400 duration-150"
             }
           >
-            ABOUT
+            About
           </NavLink>
         </li>
         <li>
@@ -64,7 +64,7 @@ const Navbar = () => {
                 : "text-gray-700  hover:text-green-400 duration-150"
             }
           >
-            CONTACT
+            Contact
           </NavLink>
         </li>
       </ul>
@@ -77,11 +77,6 @@ const Navbar = () => {
               className="w-8 rounded-full"
               src={assets.profile_pic}
               alt="profile picture"
-            />
-            <img
-              className="w-2.5"
-              src={assets.dropdown_icon}
-              alt="dropdown icon"
             />
             <div className="absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block">
               <div className="min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4">
@@ -131,7 +126,8 @@ const Navbar = () => {
           to="/"
           onClick={() => setMenu(false)}
           className={({ isActive }) =>
-            isActive ? "text-blue-500 underline" : "text-gray-700"
+            isActive ? "text-green-500"
+                : "text-gray-700  hover:text-green-400 duration-150"
           }
         >
           HOME
@@ -140,7 +136,8 @@ const Navbar = () => {
           to="/doctors"
           onClick={() => setMenu(false)}
           className={({ isActive }) =>
-            isActive ? "text-blue-500 underline" : "text-gray-700"
+            isActive ? "text-green-500"
+                : "text-gray-700  hover:text-green-400 duration-150"
           }
         >
           ALL DOCTORS
@@ -149,7 +146,8 @@ const Navbar = () => {
           to="/about"
           onClick={() => setMenu(false)}
           className={({ isActive }) =>
-            isActive ? "text-blue-500 underline" : "text-gray-700"
+            isActive ? "text-green-500"
+                : "text-gray-700  hover:text-green-400 duration-150"
           }
         >
           ABOUT
@@ -158,7 +156,8 @@ const Navbar = () => {
           to="/contacts"
           onClick={() => setMenu(false)}
           className={({ isActive }) =>
-            isActive ? "text-blue-500 underline" : "text-gray-700"
+            isActive ? "text-green-500"
+                : "text-gray-700  hover:text-green-400 duration-150"
           }
         >
           CONTACT

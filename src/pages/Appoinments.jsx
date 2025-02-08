@@ -86,7 +86,7 @@ const Appointments = () => {
         <div className="flex flex-col sm:flex-row gap-4">
           <div>
             <img
-              className="bg-blue-300 w-full rounded-lg sm:max-w-72"
+              className="bg-green-200 w-full rounded-lg sm:max-w-72"
               src={docInfo.image}
               alt={docInfo.name}
             />
@@ -128,8 +128,8 @@ const Appointments = () => {
                 key={index}
                 className={`text-center py-6 min-w-16 rounded-full cursor-pointer  ${
                   slotIndex === index
-                    ? "bg-blue-500 text-white "
-                    : "border border-gray-200 hover:bg-blue-50 duration-150"
+                    ? "bg-green-500 text-white "
+                    : "border border-gray-200 hover:bg-green-50 duration-150"
                 }`}
                 onClick={() => setSlotIndex(index)}
               >
@@ -141,10 +141,10 @@ const Appointments = () => {
           <div className={`flex gap-3 items-center w-full overflow-x-scroll mt-4`}>
             {docSlots.length > 0 &&
               docSlots[slotIndex]?.map((item, index) => (
-                <p onClick={()=>setSlotTime(item.time)} className={`text-sm font-light flex-shrink-0 px-5 py-2 rounded-full cursor-pointer ${item.time === slotTime ? 'bg-blue-400 text-white' : 'text-gray-400 border border-gray-300 hover:bg-blue-50 duration-150'}`} key={index}>{item.time.toLowerCase()}</p>
+                <p onClick={()=>setSlotTime(item.time)} className={`text-sm font-light flex-shrink-0 px-5 py-2 rounded-full cursor-pointer ${item.time === slotTime ? 'bg-green-400 text-white' : 'text-gray-400 border border-gray-300 hover:bg-blue-50 duration-150'}`} key={index}>{item.time.toLowerCase()}</p>
               ))}
           </div>
-          <button className="bg-blue-500 text-white text-sm font-medium py-3 px-14 rounded-full my-6 hover:bg-blue-600 duration-200">Book and appoinment</button>
+          <button className="bg-green-500 text-white text-sm font-medium py-3 px-14 rounded-full my-6 hover:bg-green-600 duration-200">Book and appoinment</button>
         </div>
 
         <RelatedDoctors />
