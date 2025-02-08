@@ -8,6 +8,11 @@ const Navbar = () => {
   const [showMenu, setMenu] = useState(false);
   const [token, setToken] = useState(true);
 
+  const logOut=()=>{
+    setToken(false);
+    navigate("/login");
+  }
+
   return (
     <div className="flex  items-center justify-between text-sm py-4 mb-5 border-b border-gray-400 relative">
       <h3
@@ -92,7 +97,7 @@ const Navbar = () => {
                 >
                   My Appoinments
                 </p>
-                <p className="hover:text-black" onClick={() => setToken(false)}>
+                <p className="hover:text-black" onClick={() => logOut()}>
                   Logout
                 </p>
               </div>
