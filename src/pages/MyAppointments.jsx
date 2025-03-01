@@ -4,7 +4,7 @@ const MyAppointments = () => {
   const doctors = useSelector((state) => state.doctors);
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6 flex flex-col items-center">
+    <div className="min-h-screen  p-6 flex flex-col items-center">
       <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-800 to-emerald-500 bg-clip-text text-transparent mb-6">My Appointments</h2>
       <div className="w-full max-w-7xl space-y-6">
         {doctors.slice(0, 2).map((item, index) => (

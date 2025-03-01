@@ -26,7 +26,7 @@ const MyProfile = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50 p-4">
+    <div className="flex justify-center items-center min-h-screen  p-4">
       <div className="bg-gradient-to-r from-teal-400 to-emerald-300 p-6 rounded-xl shadow-lg max-w-md w-full text-gray-700">
         {/* Profile Image */}
         <div className="flex flex-col items-center gap-4 relative">

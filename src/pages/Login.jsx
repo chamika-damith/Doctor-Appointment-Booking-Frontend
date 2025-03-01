@@ -11,7 +11,7 @@ const Login = () => {
   };
 
   return (
-    <form className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+    <form className="min-h-screen flex items-center justify-center px-4">
       <div className="flex flex-col gap-4 bg-white p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-sm text-gray-700">
         <h2 className="text-xl font-semibold">
           {state === "Sign Up" ? "Create Account" : "Welcome Back"}
